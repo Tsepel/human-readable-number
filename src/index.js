@@ -116,7 +116,7 @@ module.exports = function toReadable (number) {
                     } else { // если нет единиц
                         return getDigitName(Math.floor(number / 100 % 10)) + ' hundred ' + getTensName(Math.floor(number % 100 / 10)); //напр., 360
                     }
-                } else if (number / 10 % 10 >= 1) { //если есть десятки от 1 до двух
+                } else if (number / 10 % 10 >= 1) { //если есть десятки равные единице
                     return getDigitName(Math.floor(number / 100 % 10)) + ' hundred ' + getTeenName(number % 100); //напр., 315
                 }
                 else { //если нет десятков
